@@ -1,24 +1,32 @@
+### Updating Ollama Server
 
-## Updating Homeassistant
+Ollama Server is installed in a Debian LXC container on Proxmox.
 
-Ollama server is installed in a Debian LXC (container) in Proxmox.
+#### Installation Process
 
-### Installation Process
-The installation process follows the official guide, with minor adjustments to make it work in an LXC.
+Follow the official guide with the necessary adjustments for LXC:
 
+1. Install curl:
+   ```bash
+   apt install curl
+   ```
 
-curl -fsSL https://ollama.com/install.sh | sh
+2. Install Ollama:
+   ```bash
+   curl -fsSL https://ollama.com/install.sh | sh
+   ```
 
-apt install curl
+3. Set up the server:
+   ```bash
+   export OLLAMA_HOST=0.0.0.0
+   ollama serve   # Use 'ollama serve &' to run in the background if terminal access is needed
+   ```
 
-...
+#### Getting and Running Models
 
-export OLLAMA_HOS=0.0.0.0
+Models can be found at [Ollama Library](https://ollama.com/library).
 
-ollama serve, or ollama serve & if needing to interact with the terminal
-
-### Getting and Running Models
-
-Models are available at https://ollama.com/library
-
-Install and run a model using "ollama run model_name"
+To install and run a model:
+```bash
+ollama run <model_name>
+```
