@@ -6,6 +6,8 @@ This guide documetns the steps for integrating Zigbee coordinator into my Home A
 
 - **Sonoff USB Zigbee 3.0 Dongle (ZBDongle-E)**: It is plug and play, but the device must be correctly initiated into the Proxmox server and correctly passed to HA.
 
+------------
+
 #### Step 1: Initiate Device and Get USB ID
 
 1. **Connect the Dongle**: Plug the Zigbee dongle into a USB 2.0 port on your server. USB 3.0 has been reported to cause interference.
@@ -41,6 +43,7 @@ This guide documetns the steps for integrating Zigbee coordinator into my Home A
    ```
    What we need is *ttyACM0*.
 
+------------
 
 #### Step 2: Pass the Device to Home Assistant LXC
 
@@ -79,6 +82,10 @@ This guide documetns the steps for integrating Zigbee coordinator into my Home A
    pct restart 114
    ```
   Or manually restart from the GUI.
+
+------------
+
+
 #### Step 3: Add integration in Home Assistant
 
 
