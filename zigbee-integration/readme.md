@@ -84,8 +84,13 @@ This guide documetns the steps for integrating Zigbee coordinator into my Home A
   Or manually restart from the GUI.
 
 ------------
-
-
 #### Step 3: Add integration in Home Assistant
+1. Go to Settings > Devices & Service > + ADD INTEGRATION
+2. Search for "Add Zigbee device" and select it
+3. The setting will ask you to select the correct Serial Device Path. If the previous step was done correctly, the device should be selectable.
+4. Createa a network setting.  If not automaticall detected, add the serial port when asked. e.g.:
+`/dev/ttyACM0`
+
+
 
 
