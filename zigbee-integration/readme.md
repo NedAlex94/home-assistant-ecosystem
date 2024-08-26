@@ -76,7 +76,20 @@ This guide documetns the steps for integrating Zigbee coordinator into my Home A
    chmod 666 /dev/ttyACM0
    ```
 
-4. **Restart the LXC Container:**
+   You need to ensure the permission persists after a reboot by running :
+   
+   ```bash
+   nano /etc/udev/rules.d/99-ttyacm-permissions.rules
+   ```
+
+   And incliding in the file
+   ```bash
+   KERNEL=="ttyACM0", MODE="0666"
+   ```
+
+   
+
+5. **Restart the LXC Container:**
    After modifying the configuration file, restart the container to apply the changes:
    ```bash
    pct restart 114
