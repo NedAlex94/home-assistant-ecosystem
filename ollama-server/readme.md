@@ -22,6 +22,25 @@ Follow the official guide with the necessary adjustments for LXC:
    ollama serve   # Use 'ollama serve &' to run in the background if terminal access is needed
    ```
 
+4. Bind Ollama to a Specific IP:
+   - Edit the service configuration to set a specific IP:
+     ```bash
+     systemctl edit --full ollama.service
+     ```
+   - Add this line under `[Service]`:
+     ```bash
+     Environment="OLLAMA_HOST=10.0.0.170"
+     ```
+
+5. Make Environment Variable Persistent:
+   - Add `OLLAMA_HOST=10.0.0.170` to `/etc/environment`:
+     ```bash
+     echo "OLLAMA_HOST=10.0.0.170" >> /etc/environment
+     source /etc/environment
+     ```
+
+
+
 #### Getting and Running Models
 
 Models can be found at [Ollama Library](https://ollama.com/library).
