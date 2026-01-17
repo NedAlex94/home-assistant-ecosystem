@@ -154,4 +154,4 @@ Double-click the connection.
 
 - Log you into HA as root.
 
-And that’s it :). If anyone actually reads this and whats an image tutorial, let me know.
+And that’s it :). If anyone actually reads this and whans an image tutorial, let me know.
