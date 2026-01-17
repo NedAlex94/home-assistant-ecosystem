@@ -154,4 +154,34 @@ Double-click the connection.
 
 - Log you into HA as root.
 
+
+####Troubleshooting
+Error: no supported authentication methods available (server sent: publickey)
+
+##### Symptom
+
+SSH login works in PuTTY
+
+SSH login fails only in mRemoteNG with the error above
+
+##### Cause
+
+mRemoteNG was using its bundled PuTTY executable, not the system-installed PuTTY.
+
+As a result, it did not use the expected PuTTY session, key configuration, or Pageant context.
+
+##### Solution
+
+Open mRemoteNG
+
+Go to Tools → Options → Advanced
+
+Set PuTTY path to the same putty.exe used for the working standalone PuTTY session
+
+Restart mRemoteNG
+
+Reconnect
+
+-----
+
 And that’s it :). If anyone actually reads this and whans an image tutorial, let me know.
